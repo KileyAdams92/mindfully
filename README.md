@@ -1,5 +1,3 @@
-# project_2
-
 # Mindfully
 [Mindfully letter app](https://secret-brook-82924.herokuapp.com/)
 
