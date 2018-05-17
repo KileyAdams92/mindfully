@@ -12,22 +12,20 @@
     <!-- Site Properties -->
     <title>Mindfully | New Message</title>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../views/semantic/dist/semantic.min.css" />
-    <script src="../js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+   <script src="js/login.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/new.css">
 
-
+    <!--path needs to start from the public folder so I added views/ here -->
+        <script src="views/semantic/dist/semantic.min.js"></script>
 </head>
 
 <body>
-
     <div class="ui middle aligned center aligned grid">
         <div class="column">
             <h2 class="ui image header" id="loginHeader">
@@ -84,9 +82,11 @@
                         Submit
                     </button>
 
-                    <a href="/dashboard"><button class="ui button">
-                        Back to Dashboard
-                    </button></a>
+                    <a href="/dashboard">
+                        <button class="ui button">
+                            Back to Dashboard
+                        </button>
+                    </a>
 
                 </div>
 
@@ -101,7 +101,11 @@
         </div>
     </div>
 
-
+<script>
+    window.onload = function(){
+    $('.ui.dropdown').dropdown();
+};
+</script>
 
 </body>
 

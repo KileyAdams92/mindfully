@@ -25,24 +25,25 @@ describe('testing home page functionality', () => {
       })
   });
 });
-// // describe('test sign up button', () => {
-//   it('Test', function (done) {
-//     this.timeout('60s')
-//     const nightmare = Nightmare({ show: true })
-//     nightmare
-//       .goto(`${url}/`)
-//       .click('#getStartedBtn')
-//       //evaluate whether correct page is displayed
-//       .evaluate(function () {
-//         return document.title;
-//       })
-//       //asset expected
-//       .then(function (title) {
-//         expect(title).to.equal("Mindfully | Login");
-//         done();
-//       })
-//   });
-// });
+
+describe('test sign up button', () => {
+  it('Test', function (done) {
+    this.timeout('30s')
+    const nightmare = Nightmare({ show: true })
+    nightmare
+      .goto(`${url}/`)
+      .click('#getStartedBtn')
+      //evaluate whether correct page is displayed
+      .evaluate(function () {
+        return document.title;
+      })
+      //asset expected
+      .then(function (title) {
+        expect(title).to.equal("Mindfully | Login");
+        done();
+      })
+  });
+});
 
 // })
 // var Nightmare = require('nightmare');
