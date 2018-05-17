@@ -6,25 +6,25 @@ const expect = chai.expect
 
 const url = 'http://localhost:8080';
 
-describe('testing home page functionality', () => {
-  it('Test', function(done) {
-    this.timeout('30s')
-    const nightmare = Nightmare({show: true})
-    nightmare
-      .goto(`${url}/`)
-      //click login
-      .click('#accolades')
-      //evaluate whether correct page is displayed
-      .evaluate(selector => {
-        return document.querySelector(selector).innerText;
-      })
-      //asset expected
-      .then(function(text) {
-        "Easy to Use!"
-        done();
-      })
-  });
-});
+// describe('testing home page functionality', () => {
+//   it('Test', function(done) {
+//     this.timeout('30s')
+//     const nightmare = Nightmare({show: true})
+//     nightmare
+//       .goto(`${url}/`)
+//       //click login
+//       .click('#accolades')
+//       //evaluate whether correct page is displayed
+//       .evaluate(selector => {
+//         return document.querySelector(selector).innerText;
+//       })
+//       //asset expected
+//       .then(function(text) {
+//         "Easy to Use!"
+//         done();
+//       })
+//   });
+// });
 
 describe('test sign up button', () => {
   it('Test', function (done) {
