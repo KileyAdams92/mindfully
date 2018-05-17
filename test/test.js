@@ -6,10 +6,9 @@ const expect = chai.expect
 
 const url = 'http://localhost:8080';
 
-describe('First Test Group', () => {
+describe('testing home page functionality', () => {
   it('Test', function(done) {
-    this.timeout('10s')
-
+    this.timeout('30s')
     const nightmare = Nightmare({show: true})
     nightmare
       .goto(`${url}/`)
@@ -24,8 +23,27 @@ describe('First Test Group', () => {
         "Easy to Use!"
         done();
       })
-  })
+  });
 });
+// // describe('test sign up button', () => {
+//   it('Test', function (done) {
+//     this.timeout('60s')
+//     const nightmare = Nightmare({ show: true })
+//     nightmare
+//       .goto(`${url}/`)
+//       .click('#getStartedBtn')
+//       //evaluate whether correct page is displayed
+//       .evaluate(function () {
+//         return document.title;
+//       })
+//       //asset expected
+//       .then(function (title) {
+//         expect(title).to.equal("Mindfully | Login");
+//         done();
+//       })
+//   });
+// });
+
 // })
 // var Nightmare = require('nightmare');
 // var expect = require('chai').expect;
@@ -46,7 +64,7 @@ describe('First Test Group', () => {
 //       .catch(err => {
 //         console.err(err);
 //       });
-      
+
 // describe("Mindfully", function () {
 
 //   //first story to test
