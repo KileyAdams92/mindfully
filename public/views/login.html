@@ -45,7 +45,7 @@
                 </div>
             </h2>
 
-            <form action="/login" method="post" class="ui large form" id="signIn" name="signin">
+            <form action="/signin" method="post" class="ui large form" id="signIn" name="signin">
                 <div class="ui stacked segment">
                     <div class="field">
                         <div class="ui left icon input">
@@ -59,7 +59,8 @@
                             <input type="password" name="password" placeholder="Password">
                         </div>
                     </div>
-                    <div class="ui fluid large submit button" value="Log In" id="loginInput">Log In</div>
+                    <!-- <div class="ui fluid large submit button" value="Log In" id="loginInput">Log In</div> -->
+                    <input class="ui fluid large submit button" type="submit" value="Log In" id="loginInput" />
                 </div>
 
                 <div class="ui error message"></div>
@@ -75,13 +76,13 @@
                 <div class="ui stacked segment">
                     <label for="email">Email</label>
                     <input class="text" name="email" type="email" />
-                    <label for="firstname">First Name</label>
-                    <input name="firstname" type="text" />
-                    <label for="lastname">Last Name</label>
-                    <input name="lastname" type="text" />
+                    <label for="firstName">First Name</label>
+                    <input name="firstName" type="text" />
+                    <label for="lastName">Last Name</label>
+                    <input name="lastName" type="text" />
                     <label for="password">New Password</label>
                     <input name="password" type="password" />
-                    <input class="ui fluid large submit button" type="submit" value="Sign Up" id="loginInput"/>
+                    <input class="ui fluid large submit button" type="submit" value="Sign Up" id="loginInput" />
                 </div>
 
             </form>
