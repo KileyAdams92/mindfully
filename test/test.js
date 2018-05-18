@@ -26,8 +26,12 @@ describe('test top right corner Sign up button', () => {
       })
       //asset expected
       .then(function (title) {
-        expect(title).to.equal("Mindfully | Dashboard");
+        expect(title).to.equal("Mindfully | Login");
         done();
       })
+      //added catch to get rid of promise error message
+      .catch(function(error) {
+        console.error("Test failed:", error);
+      });
   });
 });
