@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     // Foreign key means a Letter can't be created without an Author
     models.Letter.belongsTo(models.Author, {
       foreignKey: {
-        allowNull: false
+        notNull: true
       }
     });
   };

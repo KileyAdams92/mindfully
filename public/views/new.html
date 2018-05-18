@@ -37,17 +37,17 @@
                 <div class="ui stacked segment">
 
                     <div class="field fluid large input" id="newField">
-                        <input type="text" name="title" placeholder="Title">
+                        <input type="text" name="title" id="title" placeholder="Title">
                     </div>
 
                     <div class="field fluid large input" id="newField">
-                        <textarea type="text" name="letter" placeholder="Message"></textarea>
+                        <textarea type="text" name="letter" id="letter" placeholder="Message"></textarea>
                     </div>
 
                     <div class="ui form fluid large" id="newSelection">
                         <div class="field">
                             <div class="ui search dropdown selection" name="category">
-                                <select>
+                                <select id="category">
                                     <option value="">Select Category</option>
                                     <option value="anniversary">Anniversary</option>
                                     <option value="birthday">Birthday</option>
@@ -101,11 +101,29 @@
         </div>
     </div>
 
-<script>
-    window.onload = function(){
-    $('.ui.dropdown').dropdown();
-};
-</script>
+    <script>
+        window.onload = function () {
+            $('.ui.dropdown').dropdown();
+        };
+
+        $("form").submit(function (event) {
+            event.preventDefault();
+            var title = $("#title").val();
+            var letter = $("#letter").val();
+            var category = $('#category').find(":selected").text();
+            $.ajax({
+                url: "/api/letters",
+                method: "POST",
+                data: {
+                    title: title,
+                    letter: letter,
+                    category: category
+                }
+            }).then(function (res) {
+                console.log(res)
+            })
+        })
+    </script>
 
 </body>
 
