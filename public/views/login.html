@@ -11,8 +11,6 @@
     <title>Mindfully | Login</title>
     <link rel="icon" type="image/ico" href="../img/favicon.ico">
 
-    <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css"> -->
-
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
@@ -26,15 +24,10 @@
 
 
 </head>
-<!-- 
-
- 
-    <div>
-        <input type="submit" value="Log In"/>
-    </div>
-</form> -->
 
 <body>
+
+    <!-- Log In Form -->
 
     <div class="ui middle aligned center aligned grid">
         <div class="column">
@@ -59,13 +52,14 @@
                             <input type="password" name="password" placeholder="Password">
                         </div>
                     </div>
-                    <!-- <div class="ui fluid large submit button" value="Log In" id="loginInput">Log In</div> -->
                     <input class="ui fluid large submit button" type="submit" value="Log In" id="loginInput" />
                 </div>
 
                 <div class="ui error message"></div>
 
             </form>
+
+            <!-- Sign Up Form -->
 
             <h2 class="ui image header" id="loginHeader">
                 <div class="content">
@@ -74,24 +68,42 @@
 
             <form action="/signup" method="post" class="ui large form" id="signup" name="signup">
                 <div class="ui stacked segment">
-                    <label for="email">Email</label>
-                    <input class="text" name="email" type="email" />
-                    <label for="firstName">First Name</label>
-                    <input name="firstName" type="text" />
-                    <label for="lastName">Last Name</label>
-                    <input name="lastName" type="text" />
-                    <label for="password">New Password</label>
-                    <input name="password" type="password" />
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input class="text" name="email" type="email" placeholder="Email" />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="address book icon"></i>
+                            <input class="text" name="firstName" type="text" placeholder="First Name" />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="address book icon"></i>
+                            <input class="text" name="lastName" type="text" placeholder="Last Name" />
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input name="password" type="password" placeholder="Password">
+                        </div>
+                    </div>
+
                     <!-- changed id so we only had one instance of loginInput -->
                     <input class="ui fluid large submit button" type="submit" value="Sign Up" id="SignInInput" />
                 </div>
 
             </form>
 
-            <!--  <div class="ui message">
-                New to us?
-                <a href="#">Sign Up</a>
-            </div> -->
+
         </div>
     </div>
 
