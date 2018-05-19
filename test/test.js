@@ -17,8 +17,8 @@ describe('test top right corner Sign up button', () => {
       .goto(`${url}/`)
       .click('#getStartedBtn')
       //user should drop their own info in these two 'type' fields
-      .type('input[type="text"]', 'samanthaadams.biz@gmail.com')
-      .type('input[name="password"]', 'Newjob18')
+      .type('input[type="text"]', 'guestlogin')
+      .type('input[name="password"]', 'guestpw')
       .click("#loginInput")
       //evaluate whether correct page is displayed
       .evaluate(function () {
