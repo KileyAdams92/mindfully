@@ -10,15 +10,15 @@ const url = 'http://localhost:8080';
 describe('test top right corner Sign up button', () => {
   it('Test', function (done) {
     //allow time since test replicates sign in 
-    this.timeout('40s')
+    this.timeout('60s')
     const nightmare = Nightmare({ show: true })
     nightmare
       //steps in the test
       .goto(`${url}/`)
       .click('#getStartedBtn')
       //user should drop their own info in these two 'type' fields
-      .type('input[type="text"]', 'guestlogin@gmail.com')
-      .type('input[name="password"]', 'guestpw')
+      .type('input[type="text"]', 'samanthaadams.biz@gmail.com')
+      .type('input[name="password"]', 'Newjob18')
       .click("#loginInput")
       //evaluate whether correct page is displayed
       .evaluate(function () {
