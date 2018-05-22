@@ -10,6 +10,9 @@ module.exports = function(app) {
 
   //dashboard.html route
   app.get("/dashboard", function(req, res) {
+    if (req.user === undefined) {
+      res.redirect("/login");
+    }
     res.sendFile(path.join(__dirname, "../public/views/dashboard.html"));
   });
 
@@ -20,6 +23,9 @@ module.exports = function(app) {
 
   //new.html route
   app.get("/new", function(req, res) {
+    if (req.user === undefined) {
+      res.redirect("/login");
+    }
     res.sendFile(path.join(__dirname, "../public/views/new.html"));
   });
 };
