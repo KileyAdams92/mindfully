@@ -33,11 +33,11 @@ module.exports = function(app) {
 
   //POST route for creating new letter
   app.post("/api/letters", function(req, res) {
-    console.log(req.body);
     db.Letter.create({
       title: req.body.title,
       letter: req.body.letter,
-      category: req.body.category
+      category: req.body.category,
+      AuthorId: req.user.id
     }).then(function(result) {
       res.json(result);
     });
