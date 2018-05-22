@@ -3,3 +3,4 @@ config/config.json
 .DS_Store
 public/.DS_Store
 .env
+.DS_Store

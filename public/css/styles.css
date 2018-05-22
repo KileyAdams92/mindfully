@@ -106,6 +106,8 @@
 
 #getStartedBtn:a {
   color: rgba(255, 255, 255, 0.9);
+  background-color: #fa7921;
+
 }
 
 #getStartedBtn:hover {
@@ -120,7 +122,7 @@
 #secondBtn:hover {
   background-color: #5c7526;
 }
-
+/* 
 #thirdBtn {
   background-color: #fde74c;
   color: rgba(255, 255, 255, 0.9);
@@ -137,7 +139,8 @@
 
 #fourthBtn:hover {
   background-color: #c04e2f;
-}
+} */
+
 
 /* #topDashboard{
   background-color: #a55d2e;

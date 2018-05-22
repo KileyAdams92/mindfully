@@ -10,7 +10,7 @@ const url = 'http://localhost:8080';
 describe('test top right corner Sign up button', () => {
   it('Test', function (done) {
     //allow time since test replicates sign in 
-    this.timeout('40s')
+    this.timeout('60s')
     const nightmare = Nightmare({ show: true })
     nightmare
       //steps in the test
